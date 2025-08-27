@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- CSS -->
+     <link rel="stylesheet" href="./styles/style.css">
+     
+     <!-- Tailwind CSS CDN -->
+      <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Hind Madurai + Inter -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+     <!-- Daisui CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+     <!-- Custom CSS -->
+     <style>
+     
+     .inter {
+        font-family: "Inter", sans-serif;
+    }
+    
+    .hind {
+        font-family: "Hind Madurai", sans-serif;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(to right, #013223, #006747, #013223);
+        }
+
+</style>
+
+     </style>
+</head>
+<body>
+    <header>
+        <nav class="inter flex justify-between items-center py-4 px-16 w-full fixed top-0 bg-[#FFFFFF] z-50 shadow-lg">
+            <div class="flex justify-center items-center gap-2">
+                <img class="w-14 h-14" src="./assets/logo.png" alt="Logo">
+                <h3 class="text-[#006747] font-black text-xl">Emergency<br>Services</h3>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="flex justify-center items-center rounded-full py-3 px-6 gap-2 bg-[rgba(65,255,107,0.1)] font-extrabold text-[#000000]">
+                    <span id="heart-count">0</span>
+                    <img class="w-8 h-8" src="./assets/heart.png" alt="Heart">
+                </button>
+                <button class="flex justify-center items-center rounded-full py-4 px-4 gap-2 bg-[rgba(65,255,107,0.1)] font-extrabold text-[#000000]">
+                    <span id="coin-count">100</span><img class="w-6 h-6" src="./assets/coin.png" alt="Coin">
+                </button>
+                <button class="flex justify-center items-center rounded-full py-3 px-8 gap-2 bg-[#00A63E] text-[#FFFFFF] font-medium">
+                    <span id="copy-count">2</span>Copy
+                </button>
+            </div>
+        </nav>
+        <section class="hind gradient-bg text-[#FFFFFF] h-[45vh] flex items-end justify-center p-5">
+            <div class="text-center">
+                <img src="./assets/logo-dark.png" alt="logo-dark" class="mx-auto mb-6 w-24 h-24">
+                <h1 class="font-extrabold text-4xl mb-4">Emergency Service Directory</h1>
+                <h2 class="text-lg max-w-5xl mx-auto">
+                    Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
+                </h2>
+            </div>
+        </section>
+    </header>
+    <section class="hind bg-[rgba(65,255,107,0.1)] max-w-full">
+        <div class="mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-7 py-12 px-14">
+                
+                <!-- Row 1 -->
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-20 md:gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold w-auto md:w-65">National Emergency Number</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">National Emergency</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">999</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 py-1 px-6 flex items-center justify-center rounded-full">All</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#DFEFFF] rounded-2xl" src="./assets/police.png" alt="Police">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Police Helpline Number</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Police</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">999</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 flex px-10 py-1 items-center justify-center rounded-full">Police</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/fire-service.png" alt="fire-service">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Fire Service Number</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Fire Service</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">999</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Fire</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <!-- Call History -->
+                 <div class="bg-[#FFFFFF] row-span-3 py-4 px-2">
+                    <div class="flex justify-between items-center py-4">
+                        <div class="flex gap-2">
+                            <img src="./assets/clock.png" alt="clock">
+                            <h3 class="inter text-lg text-[#111111] font-semibold">Call History</h3>
+                        </div>
+                        <button class="inter rounded-full py-3 px-8 gap-2 bg-[#00A63E] text-[#FFFFFF] font-medium">
+                            Clear
+                        </button>
+                    </div>
+
+                    <div class="bg-[#FAFAFA] flex justify-between items-center py-4 px-2 rounded-lg shadow-lg">
+                        <div class="text-start">
+                            <h3 class="inter text-lg text-[#111111] font-semibold">Fire Service Number</h3>
+                            <h4 class="text-[#5C5C5C] text-lg">999</h4>
+                        </div>
+                        <div class="hind text-lg text-[#111111]">
+                            <h3>11:36:58 AM</h3>
+                        </div>
+                    </div>
+
+
+
+                 </div>
+                 
+
+
+
+
+                <!-- Row 2 -->
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/ambulance.png" alt="Ambulance">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Ambulance Service</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Ambulance</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">1994-999999</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-10 py-1 flex items-center justify-center rounded-full">Health</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Women & Child Helpline</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Women & Child Helpline</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">109</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Help</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Anti-Corruption Helpline</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Anti-Corruption</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">106</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Govt.</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+                  
+                <!-- Row 3 -->
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Electricity Helpline</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Electricity</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">16216</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-14 py-2 flex items-center justify-center rounded-full">Electricity</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/brac.png" alt="Brac">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-xl text-[#111111] font-bold">Brac Helpline</h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Brac</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">16445</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">NGO</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+
+                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                    <div>
+                        <div class="flex justify-around items-center gap-40 pb-4">
+                            <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/Bangladesh-Railway.png" alt="Bangladesh-Railway">
+                            <img src="./assets/love-icon.png" alt="Wishlist">
+                        </div>
+                        <h1 class="text-lg text-[#111111] font-bold">Bangladesh Railway Helpline </h1>
+                        <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Bangladesh Railway</h2>
+                        <h3 class="text-3xl text-[#111111] font-bold">163</h3>
+                        <h4 class="bg-[#F2F2F2] text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Travel</h4>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
+                            Call
+                        </button>
+                    </div>
+                 </div>
+                </div>
+        </div>
+    </section>
+</body>
+</html>
