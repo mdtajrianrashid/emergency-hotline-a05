@@ -22,26 +22,23 @@
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
      <!-- Custom CSS -->
-     <style>
-     
-     .inter {
-        font-family: "Inter", sans-serif;
+      
+      <style>      
+      .inter {
+      font-family: "Inter", sans-serif;
+      }
+      
+      .hind {
+      font-family: "Hind Madurai", sans-serif;
+      }
+      
+      .gradient-bg {
+      background: linear-gradient(to right, #013223, #006747, #013223);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-    
-    .hind {
-        font-family: "Hind Madurai", sans-serif;
-    }
-    
-    .gradient-bg {
-        background: linear-gradient(to right, #013223, #006747, #013223);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        }
-
-</style>
-
-     </style>
+    </style>
 </head>
 <body>
     <header>
@@ -59,7 +56,7 @@
                     <span id="coin-count">100</span><img class="w-3 md:w-6 h-3 md:h-6" src="./assets/coin.png" alt="Coin">
                 </button>
                 <button class="flex justify-center items-center rounded-full py-1.5 md:py-3 px-2 md:px-8 gap-1 md:gap-2 bg-[#00A63E] text-[#FFFFFF] font-medium">
-                    <span id="copy-count">2</span>Copy
+                    <span id="copy-count">0</span>Copy
                 </button>
             </div>
         </nav>
@@ -78,7 +75,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-3.5 md:gap-7 py-6 md:py-12 px-7 md:px-14">
                 
                 <!-- Row 1 -->
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
@@ -86,19 +83,19 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold w-65">National Emergency Number</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">National Emergency</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">999</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 py-1 px-6 flex items-center justify-center rounded-full">All</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">999</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-40 py-1 flex items-center justify-center rounded-full">All Emergency</h4>
                     </div>
                     <div class="flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
                     </div>
                  </div>
 
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#DFEFFF] rounded-2xl" src="./assets/police.png" alt="Police">
@@ -106,19 +103,19 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Police Helpline Number</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Police</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">999</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 flex px-10 py-1 items-center justify-center rounded-full">Police</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">999</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 flex px-10 py-1 items-center justify-center rounded-full">Police</h4>
                     </div>
                     <div class="flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
                     </div>
                  </div>
 
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/fire-service.png" alt="fire-service">
@@ -126,12 +123,12 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Fire Service Number</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Fire Service</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">999</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Fire</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">999</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Fire</h4>
                     </div>
                     <div class="flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
@@ -139,33 +136,24 @@
                  </div>
 
                  <!-- Call History -->
-                 <div class="bg-[#FFFFFF] row-span-3 py-4 px-2">
+                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2">
                     <div class="flex justify-between items-center py-4">
                         <div class="flex gap-2">
                             <img src="./assets/clock.png" alt="clock">
-                            <h3 class="inter text-lg text-[#111111] font-semibold">Call History</h3>
+                            <h3 class="text-lg text-[#111111] font-semibold">Call History</h3>
                         </div>
-                        <button class="inter rounded-full py-1.5 md:py-3 px-4 md:px-8 bg-[#00A63E] text-[#FFFFFF] font-medium">
+                        <button id="clear-history" class="rounded-full py-1.5 md:py-3 px-4 md:px-8 bg-[#00A63E] text-[#FFFFFF] font-medium">
                             Clear
                         </button>
                     </div>
 
-                    <div class="bg-[#FAFAFA] flex justify-between items-center py-4 px-2 rounded-lg shadow-lg">
-                        <div class="text-start">
-                            <h3 class="inter text-base md:text-lg text-[#111111] font-semibold">Fire Service Number</h3>
-                            <h4 class="text-[#5C5C5C] text-base md:text-lg">999</h4>
-                        </div>
-                        <div class="hind text-base md:text-lg text-[#111111]">
-                            <h3>11:36:58 AM</h3>
-                        </div>
+                    <div id="history-container" class="inter bg-[#FAFAFA] flex flex-col gap-2 overflow-y-auto max-h-[60rem]">
+
                     </div>
-
-
-
-                 </div>
+                </div>
 
                 <!-- Row 2 -->
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/ambulance.png" alt="Ambulance">
@@ -173,19 +161,19 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Ambulance Service</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Ambulance</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">1994-999999</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-10 py-1 flex items-center justify-center rounded-full">Health</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">1994-999999</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-10 py-1 flex items-center justify-center rounded-full">Health</h4>
                     </div>
-                    <div class="flex justify-center items-center gap-2">
+                    <div class="copy-btn flex justify-center items-center gap-2">
                         <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
                     </div>
                  </div>
 
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
@@ -193,19 +181,19 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Women & Child Helpline</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Women & Child Helpline</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">109</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Help</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">109</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Help</h4>
                     </div>
-                    <div class="flex justify-center items-center gap-2">
+                    <div class="copy-btn flex justify-center items-center gap-2">
                         <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
                     </div>
                  </div>
 
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
@@ -213,12 +201,12 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Anti-Corruption Helpline</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Anti-Corruption</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">106</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Govt.</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">106</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Govt.</h4>
                     </div>
-                    <div class="flex justify-center items-center gap-2">
+                    <div class="copy-btn flex justify-center items-center gap-2">
                         <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
@@ -226,7 +214,7 @@
                  </div>
                   
                 <!-- Row 3 -->
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/emergency.png" alt="Emergency">
@@ -234,19 +222,19 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Electricity Helpline</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Electricity</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">16216</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-14 py-2 flex items-center justify-center rounded-full">Electricity</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">16216</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-14 py-2 flex items-center justify-center rounded-full">Electricity</h4>
                     </div>
-                    <div class="flex justify-center items-center gap-2">
+                    <div class="copy-btn flex justify-center items-center gap-2">
                         <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
                     </div>
                  </div>
 
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/brac.png" alt="Brac">
@@ -254,19 +242,19 @@
                         </div>
                         <h1 class="text-base md:text-xl text-[#111111] font-bold">Brac Helpline</h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Brac</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">16445</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">NGO</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">16445</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">NGO</h4>
                     </div>
-                    <div class="flex justify-center items-center gap-2">
+                    <div class="copy-btn flex justify-center items-center gap-2">
                         <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
                     </div>
                  </div>
 
-                 <div class="bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
+                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
                     <div>
                         <div class="flex justify-around items-center gap-40 pb-4">
                             <img class="w-16 h-16 bg-[#FFE3E2] rounded-2xl" src="./assets/Bangladesh-Railway.png" alt="Bangladesh-Railway">
@@ -274,12 +262,12 @@
                         </div>
                         <h1 class="text-base md:text-lg text-[#111111] font-bold w-59">Bangladesh Railway Helpline </h1>
                         <h2 class="text-[#5C5C5C] font-normal text-base pb-6">Bangladesh Railway</h2>
-                        <h3 class="text-2xl md:text-3xl text-[#111111] font-bold">163</h3>
-                        <h4 class="bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Travel</h4>
+                        <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">163</h3>
+                        <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Travel</h4>
                     </div>
                     <div class="flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
-                        <button class="bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                        <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
                         </button>
@@ -291,19 +279,130 @@
 
     <!-- Javascript -->
     <script>
+    
+    // Wishlist Function
     const wishlistIcons = document.querySelectorAll(".wishlist-icon");
-  const heartCount = document.getElementById("heart-count");
-  let count = 0;
-
-  wishlistIcons.forEach(icon => {
+    const heartCount = document.getElementById("heart-count");
+    
+    let count = 0;
+    wishlistIcons.forEach(icon => {
     icon.addEventListener("click", () => {
+        count++;
+        heartCount.textContent = count;
+        icon.src = "./assets/heart.png";
+        icon.style.width = "32px";
+        icon.style.height = "32px";
+    });
+});
+
+//   Calling Function
+document.addEventListener("DOMContentLoaded", function () {
+    const coinDisplay = document.getElementById("coin-count");
+
+    let coins = parseInt(coinDisplay.textContent, 10) || 0;
+
+    const buttons = document.querySelectorAll(".call-btn");
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+
+            const infoBlock = button.parentElement.previousElementSibling;
+            const number = infoBlock.querySelector(".number").textContent.trim();
+            const service = infoBlock.querySelector(".service").textContent.trim();
+
+            if (coins >= 20) {
+                coins -= 20;
+                coinDisplay.textContent = coins;
+                alert("📞 Calling " + service + " services at " + number);
+            } else {
+                alert("❌ Not enough coins to make this call! You need at least 20 coins to make a call");
+            }
+        });
+    });
+});
+
+// History Function
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const historyContainer = document.getElementById("history-container");
+    const clearBtn = document.getElementById("clear-history");
+    const buttons = document.querySelectorAll(".call-btn");
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const infoBlock = button.parentElement.previousElementSibling;
+            const numberEl = infoBlock.querySelector(".number");
+            const serviceEl = infoBlock.querySelector(".service");
+
+            const number = numberEl.textContent.trim();
+            const service = serviceEl.textContent.trim();
+
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString();
+
+            const historyItem = document.createElement("div");
+            historyItem.classList.add(
+                "bg-[#FAFAFA]",
+                "flex",
+                "justify-between",
+                "items-center",
+                "py-4",
+                "px-2",
+                "rounded-lg",
+                "shadow-lg",
+                "mb-2"
+            );
+
+            historyItem.innerHTML = `
+                <div class="text-start">
+                    <h3 class="inter text-base md:text-lg text-[#111111] font-semibold">${service}</h3>
+                    <h4 class="text-[#5C5C5C] text-base md:text-lg">${number}</h4>
+                </div>
+                <div class="hind text-base md:text-lg text-[#111111]">
+                    <h3>${timeStr}</h3>
+                </div>
+            `;
+            historyContainer.prepend(historyItem);
+        });
+    });
+
+    if (clearBtn) {
+        clearBtn.addEventListener("click", function () {
+            historyContainer.innerHTML = "";
+        });
+    }
+});
+
+// Copy Function
+
+  const copyButtons = document.querySelectorAll(".copy-btn");
+
+  const copyCount = document.getElementById("copy-count");
+  let Initial = 0;
+  copyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        count++;
+        copyCount.textContent = count;
+    });
+});
+
+  copyButtons.forEach(button => {
+    const card = button.closest(".btn-container");
+    if (!card) return;
+
+    const numberElem = card.querySelector(".number");
+    const copyCountElem = card.querySelector("#copy-count");
+
+    let count = parseInt(copyCountElem?.textContent) || 0;
+    button.addEventListener("click", () => {
+      if (!numberElem) return;
+      navigator.clipboard.writeText(numberElem.textContent);
       count++;
-      heartCount.textContent = count;
-      icon.src = "./assets/heart.png";
-      icon.style.width = "32px";
-      icon.style.height = "32px";
+      if (copyCountElem) copyCountElem.textContent = count;
+      alert(`Number ${numberElem.textContent} copied!`);
     });
   });
-  </script>
+
+    </script>
 </body>
 </html>
