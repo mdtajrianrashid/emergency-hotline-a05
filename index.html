@@ -85,23 +85,6 @@
     <section class="hind bg-[rgba(65,255,107,0.1)] max-w-full">
         <div class="mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-x-3.5 md:gap-x-7 gap-y-7 py-6 md:py-12 px-7 md:px-14">
-
-                <!-- Call History for Smaller Devices-->
-                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2 block md:hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-100">
-                    <div class="flex justify-between items-center py-4">
-                        <div class="flex gap-2">
-                            <img src="./assets/clock.png" alt="clock">
-                            <h3 class="text-lg text-[#111111] font-semibold">Call History</h3>
-                        </div>
-                        <button id="clear-history" class="rounded-full py-1.5 md:py-3 px-4 md:px-8 bg-[#00A63E] text-[#FFFFFF] font-medium transform transition-all duration-300 hover:scale-110 hover:bg-[#00C851] hover:shadow-lg">
-                            Clear
-                        </button>
-                    </div>
-
-                    <div id="history-container" class="inter bg-[#FAFAFA] flex flex-col gap-2 overflow-y-auto max-h-[20rem]">
-
-                    </div>
-                </div>
                 
                 <!-- Row 1 -->
                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-105">
@@ -164,8 +147,8 @@
                     </div>
                  </div>
 
-                 <!-- Call History for Larger Devices -->
-                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2 hidden md:block transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-100">
+                 <!-- Call History -->
+                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:scale-100 order-first md:order-none">
                     <div class="flex justify-between items-center py-4">
                         <div class="flex gap-2">
                             <img src="./assets/clock.png" alt="clock">
@@ -176,7 +159,7 @@
                         </button>
                     </div>
 
-                    <div id="history-container" class="inter bg-[#FAFAFA] flex flex-col gap-2 overflow-y-auto max-h-[60rem]">
+                    <div id="history-container" class="inter bg-[#FAFAFA] flex flex-col gap-2 overflow-y-auto max-h-[20rem] md:max-h-[60rem]">
 
                     </div>
                 </div>
@@ -193,8 +176,8 @@
                         <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">1994-999999</h3>
                         <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-10 py-1 flex items-center justify-center rounded-full">Health</h4>
                     </div>
-                    <div class="copy-btn flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
                         <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#00C851] hover:shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
@@ -213,8 +196,8 @@
                         <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">109</h3>
                         <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Help</h4>
                     </div>
-                    <div class="copy-btn flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
                         <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#00C851] hover:shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
@@ -233,8 +216,8 @@
                         <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">106</h3>
                         <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">Govt.</h4>
                     </div>
-                    <div class="copy-btn flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
                         <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#00C851] hover:shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
@@ -254,8 +237,8 @@
                         <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">16216</h3>
                         <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-14 py-2 flex items-center justify-center rounded-full">Electricity</h4>
                     </div>
-                    <div class="copy-btn flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
                         <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#00C851] hover:shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
@@ -274,8 +257,8 @@
                         <h3 class="number text-2xl md:text-3xl text-[#111111] font-bold">16445</h3>
                         <h4 class="service bg-[#F2F2F2] text-base md:text-lg text-[#5C5C5C] font-normal w-12 px-8 py-1 flex items-center justify-center rounded-full">NGO</h4>
                     </div>
-                    <div class="copy-btn flex justify-center items-center gap-2">
-                        <button class="flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
+                    <div class="flex justify-center items-center gap-2">
+                        <button class="copy-btn flex justify-center items-center gap-1.5 text-[#5C5C5C] border border-[#D4D6D5] w-44 h-10 rounded-lg transform transition-all duration-300 hover:bg-[#F0F0F0] hover:scale-105 hover:shadow-md"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11c0-2.828 0-4.243.879-5.121C7.757 5 9.172 5 12 5h3c2.828 0 4.243 0 5.121.879C21 6.757 21 8.172 21 11v5c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22h-3c-2.828 0-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/><path d="M6 19a3 3 0 0 1-3-3v-6c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h4a3 3 0 0 1 3 3"/></g></svg>Copy</button>
                         <button class="call-btn bg-[#00A63E] flex justify-center items-center gap-1.5 text-[#FFFFFF] w-44 h-10 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-[#00C851] hover:shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.829 16.171a20.9 20.9 0 0 1-4.846-7.614c-.573-1.564-.048-3.282 1.13-4.46l.729-.728a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.42.42a1.81 1.81 0 0 0 0 2.56l3.84 3.841a1.81 1.81 0 0 0 2.56 0l.421-.42a2.11 2.11 0 0 1 2.987 0l1.707 1.707a2.11 2.11 0 0 1 0 2.987l-.728.728c-1.178 1.179-2.896 1.704-4.46 1.131a20.9 20.9 0 0 1-7.614-4.846Z"/></svg>
                             Call
@@ -309,50 +292,43 @@
     <!-- Javascript -->
     <script>
     
-    // Wishlist Function
-    const wishlistIcons = document.querySelectorAll(".wishlist-icon");
-    const heartCount = document.getElementById("heart-count");
-    
-    let count = 0;
-    wishlistIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        count++;
-        heartCount.textContent = count;
-        icon.src = "./assets/heart.png";
-        icon.style.width = "32px";
-        icon.style.height = "32px";
-    });
+// Wishlist Function
+const wishlistIcons = document.querySelectorAll(".wishlist-icon");
+const heartCount = document.getElementById("heart-count");
+
+let heartCounter = 0; // separate variable
+wishlistIcons.forEach(icon => {
+  icon.addEventListener("click", () => {
+    heartCounter++;
+    heartCount.textContent = heartCounter;
+    icon.src = "./assets/heart.png";
+    icon.style.width = "32px";
+    icon.style.height = "32px";
+  });
 });
 
 // Copy Function
+const copyButtons = document.querySelectorAll(".copy-btn");
+const copyCount = document.getElementById("copy-count");
 
-  const copyButtons = document.querySelectorAll(".copy-btn");
-  const copyCount = document.getElementById("copy-count");
+let copyCounter = 0; // separate variable
+copyButtons.forEach(button => {
+  const card = button.closest(".btn-container");
+  if (!card) return;
 
-  let Initial = 0;
-  copyButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        count++;
-        copyCount.textContent = count;
-    });
+  const numberElem = card.querySelector(".number");
+
+  button.addEventListener("click", () => {
+    if (!numberElem) return;
+    navigator.clipboard.writeText(numberElem.textContent);
+
+    copyCounter++; // increase copy count only
+    copyCount.textContent = copyCounter;
+
+    alert(`Number ${numberElem.textContent} copied!`);
+  });
 });
 
-  copyButtons.forEach(button => {
-    const card = button.closest(".btn-container");
-    if (!card) return;
-
-    const numberElem = card.querySelector(".number");
-    const copyCountElem = card.querySelector("#copy-count");
-
-    let count = parseInt(copyCountElem?.textContent) || 0;
-    button.addEventListener("click", () => {
-      if (!numberElem) return;
-      navigator.clipboard.writeText(numberElem.textContent);
-      count++;
-      if (copyCountElem) copyCountElem.textContent = count;
-      alert(`Number ${numberElem.textContent} copied!`);
-    });
-  });
 
 //   Calling Function
 document.addEventListener("DOMContentLoaded", function () {
