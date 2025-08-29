@@ -68,6 +68,23 @@
     <section class="hind bg-[rgba(65,255,107,0.1)] max-w-full">
         <div class="mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-3.5 md:gap-7 py-6 md:py-12 px-7 md:px-14">
+
+                <!-- Call History -->
+                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2 block md:hidden">
+                    <div class="flex justify-between items-center py-4">
+                        <div class="flex gap-2">
+                            <img src="./assets/clock.png" alt="clock">
+                            <h3 class="text-lg text-[#111111] font-semibold">Call History</h3>
+                        </div>
+                        <button id="clear-history" class="rounded-full py-1.5 md:py-3 px-4 md:px-8 bg-[#00A63E] text-[#FFFFFF] font-medium">
+                            Clear
+                        </button>
+                    </div>
+
+                    <div id="history-container" class="inter bg-[#FAFAFA] flex flex-col gap-2 overflow-y-auto max-h-[20rem]">
+
+                    </div>
+                </div>
                 
                 <!-- Row 1 -->
                 <div class="btn-container bg-[#FFFFFF] py-8 px-8 flex flex-col gap-6 rounded-2xl w-full">
@@ -131,7 +148,7 @@
                  </div>
 
                  <!-- Call History -->
-                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2">
+                 <div class="inter bg-[#FFFFFF] row-span-3 py-4 px-2 hidden md:block">
                     <div class="flex justify-between items-center py-4">
                         <div class="flex gap-2">
                             <img src="./assets/clock.png" alt="clock">
@@ -402,8 +419,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-
 
     </script>
 </body>
