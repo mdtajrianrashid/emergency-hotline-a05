@@ -292,54 +292,47 @@
     <!-- Javascript -->
     <script>
     
-// Wishlist Function
-const wishlistIcons = document.querySelectorAll(".wishlist-icon");
-const heartCount = document.getElementById("heart-count");
-
-let heartCounter = 0; // separate variable
-wishlistIcons.forEach(icon => {
-  icon.addEventListener("click", () => {
-    heartCounter++;
-    heartCount.textContent = heartCounter;
-    icon.src = "./assets/heart.png";
-    icon.style.width = "32px";
-    icon.style.height = "32px";
-  });
-});
-
-// Copy Function
-const copyButtons = document.querySelectorAll(".copy-btn");
-const copyCount = document.getElementById("copy-count");
-
-let copyCounter = 0; // separate variable
-copyButtons.forEach(button => {
-  const card = button.closest(".btn-container");
-  if (!card) return;
-
-  const numberElem = card.querySelector(".number");
-
-  button.addEventListener("click", () => {
-    if (!numberElem) return;
-    navigator.clipboard.writeText(numberElem.textContent);
-
-    copyCounter++; // increase copy count only
-    copyCount.textContent = copyCounter;
-
-    alert(`Number ${numberElem.textContent} copied!`);
-  });
-});
-
-
-//   Calling Function
-document.addEventListener("DOMContentLoaded", function () {
-    const coinDisplay = document.getElementById("coin-count");
-
-    let coins = parseInt(coinDisplay.textContent, 10) || 0;
-
-    const buttons = document.querySelectorAll(".call-btn");
-    buttons.forEach(function (button) {
+    // Wishlist Function
+    const wishlistIcons = document.querySelectorAll(".wishlist-icon");
+    const heartCount = document.getElementById("heart-count");
+    
+    let heartCounter = 0;
+    wishlistIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            heartCounter++;
+            heartCount.textContent = heartCounter;
+            icon.src = "./assets/heart.png";
+            icon.style.width = "32px";
+            icon.style.height = "32px";
+        });
+    });
+    
+    // Copy Function
+    const copyButtons = document.querySelectorAll(".copy-btn");
+    const copyCount = document.getElementById("copy-count");
+    
+    let copyCounter = 0;
+    copyButtons.forEach(button => {
+        const card = button.closest(".btn-container");
+        if (!card) return;
+        const numberElem = card.querySelector(".number");
+        button.addEventListener("click", () => {
+            if (!numberElem) return;
+            navigator.clipboard.writeText(numberElem.textContent);
+            copyCounter++;
+            copyCount.textContent = copyCounter;
+            alert(`Number ${numberElem.textContent} copied!`);
+        });
+    });
+    
+    //  Calling Function
+    document.addEventListener("DOMContentLoaded", function () {
+        const coinDisplay = document.getElementById("coin-count");
+        let coins = parseInt(coinDisplay.textContent, 10) || 0;
+        const buttons = document.querySelectorAll(".call-btn");
+        buttons.forEach(function (button) {
         button.addEventListener("click", function () {
-
+            
             const infoBlock = button.parentElement.previousElementSibling;
             const number = infoBlock.querySelector(".number").textContent.trim();
             const service = infoBlock.querySelector(".service").textContent.trim();
@@ -412,7 +405,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
     </script>
 </body>
 </html>
